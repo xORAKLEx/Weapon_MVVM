@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\WeaponDLL.cs" />
+    <Compile Include="Models\WeaponDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializers\WeaponSerializer.cs" />
   </ItemGroup>

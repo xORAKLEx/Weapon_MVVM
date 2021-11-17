@@ -12,7 +12,7 @@ namespace DAL.Serializers
     public class WeaponSerializer
     {
         
-        public void Serialize(List<WeaponDLL> weapons)
+        public void Serialize(List<WeaponDAL> weapons)
         {
             var formatter = new BinaryFormatter();
 
@@ -22,15 +22,15 @@ namespace DAL.Serializers
             }
         }
 
-        public List<WeaponDLL> Deserialize()
+        public List<WeaponDAL> Deserialize()
         {
             var formatter = new BinaryFormatter();
 
             using (FileStream fs = new FileStream("weapons.dat", FileMode.OpenOrCreate))
             {
-                var weapons = (List<WeaponDLL>)formatter.Deserialize(fs);
+                var weapons = (List<WeaponDAL>)formatter.Deserialize(fs);
 
-                return weapons ?? new List<WeaponDLL>();
+                return weapons ?? new List<WeaponDAL>();
             }
         }
 
