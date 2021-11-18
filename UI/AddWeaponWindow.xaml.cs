@@ -10,22 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using UI.ViewModels;
 
 namespace UI
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AddWeaponWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddWeaponWindow : Window
     {
-        public MainWindow()
+        public AddWeaponWindow()
         {
             InitializeComponent();
-            DataContext = new WeaponsViewModel();
         }
-        
     }
 }

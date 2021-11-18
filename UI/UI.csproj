@@ -55,6 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddWeaponWindow.xaml.cs">
+      <DependentUpon>AddWeaponWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeWeaponWindow.xaml.cs">
+      <DependentUpon>ChangeWeaponWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\IRelayCommand.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="ViewModels\AddWeaponViewModel.cs" />
+    <Compile Include="ViewModels\ChangeWeaponViewModel.cs" />
+    <Compile Include="ViewModels\WeaponsViewModel.cs" />
+    <Page Include="AddWeaponWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeWeaponWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +88,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Weapon.cs" />
+    <Compile Include="Models\WeaponType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -100,5 +121,6 @@
       <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

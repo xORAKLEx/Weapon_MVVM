@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        x:Name="WeaponWindow"
+        Title="WeaponWindow" Height="197.483" Width="396">
     <Grid>
-        
+        <Button Command="{Binding AddWeaponCommand}" Content="Add" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding ChangeWeaponCommand}" CommandParameter="{Binding Path=SelectedItem, ElementName=WeaponsDG}" Content="Change" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding RemoveWeaponCommand}" CommandParameter="{Binding Path=SelectedItem, ElementName=WeaponsDG}" Content="Remove" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding CloseCommand}" CommandParameter="{Binding ElementName=WeaponWindow}" Content="Close" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="WeaponsDG" ItemsSource="{Binding Weapons}" HorizontalAlignment="Left" Height="126" Margin="126,10,0,0" VerticalAlignment="Top" Width="250"/>
+
     </Grid>
 </Window>

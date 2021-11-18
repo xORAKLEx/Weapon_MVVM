@@ -28,9 +28,18 @@ namespace DAL.Serializers
 
             using (FileStream fs = new FileStream("weapons.dat", FileMode.OpenOrCreate))
             {
-                var weapons = (List<WeaponDAL>)formatter.Deserialize(fs);
+                try
+                {
+                    var weapons = (List<WeaponDAL>)formatter.Deserialize(fs);
 
-                return weapons ?? new List<WeaponDAL>();
+                    return weapons ?? new List<WeaponDAL>();
+                }
+                catch (Exception)
+                {
+
+                    return new List<WeaponDAL>();
+                }
+                
             }
         }
 

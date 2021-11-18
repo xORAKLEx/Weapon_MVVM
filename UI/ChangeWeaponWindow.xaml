@@ -1,0 +1,19 @@
+﻿<Window x:Class="UI.ChangeWeaponWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        x:Name="ChangeWindow"
+        Title="ChangeWeaponWindow" Height="450" Width="326">
+    <Grid>
+        <TextBox Text="{Binding Name}" HorizontalAlignment="Left" Margin="34,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="100" Background="#FFF0F0F0"/>
+        <ComboBox SelectedItem="{Binding Type}" ItemsSource="{Binding Types}" HorizontalAlignment="Left" Margin="34,152,0,0" VerticalAlignment="Top" Height="25" Width="100" Background="#FFF0F0F0"/>
+        <TextBox Text="{Binding AmmoSize}" HorizontalAlignment="Left" Margin="34,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="100" Background="#FFF0F0F0"/>
+        <TextBox Text="{Binding AmmoCount}" HorizontalAlignment="Left" Margin="34,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="100" Background="#FFF0F0F0"/>
+        <Button Command="{Binding ChangeWeaponCommand}" CommandParameter="{Binding ElementName=ChangeWindow}" Content="Add" HorizontalAlignment="Left" Margin="34,294,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+
+
+    </Grid>
+</Window>

@@ -24,7 +24,7 @@ namespace BLL.Core
             weaponSerializer.Serialize(weapons.Select(x => x.ConvertToDAL()).ToList());
         }
 
-        public void Restore()
+        public List<WeaponBLL> Restore()
         {
             var weaponsDAL = weaponSerializer.Deserialize();
             weapons = new List<WeaponBLL>();
@@ -34,6 +34,7 @@ namespace BLL.Core
                 weapon.CopyFromDAL(item);
                 weapons.Add(weapon);
             }
+            return weapons;
         }
 
         public List<WeaponBLL> GetWeapons()

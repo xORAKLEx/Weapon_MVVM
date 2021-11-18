@@ -9,6 +9,18 @@ namespace BLL.Models
 {
     public class WeaponBLL
     {
+        public WeaponBLL()
+        {
+        }
+
+        public WeaponBLL(string name, int type, int ammoCount, string ammoSize)
+        {
+            Name = name;
+            Type = type;
+            AmmoCount = ammoCount;
+            AmmoSize = ammoSize;
+        }
+
         public string Name { get; set; }
 
         public int Type { get; set; }
